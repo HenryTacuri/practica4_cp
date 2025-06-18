@@ -44,6 +44,11 @@ class TrafficGUI:
             self.lights[d] = self.canvas.create_oval(x-10, y-10, x+10, y+10, fill='red')
 
     def update_gui(self):
+
+        if not self.controller.is_alive():
+            self.on_closing()
+            return
+        
         while not self.state_q.empty():
             d, c = self.state_q.get()
             self.colors[d] = c

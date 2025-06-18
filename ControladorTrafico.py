@@ -24,7 +24,7 @@ class ControladorTrafico(multiprocessing.Process):
         self.barrier.wait()
         ns = ['Norte', 'Sur']
         ew = ['Este', 'Oeste']
-        while True:
+        for ciclo in range(1):
             # Fase Norte-Sur
             for d in ns:
                 self.pipes[d].send('green')

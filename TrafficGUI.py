@@ -25,6 +25,16 @@ class TrafficGUI:
         self.canvas.create_rectangle(0, 250, 600, 350, fill='gray')
         self.canvas.create_line(0, 300, 600, 300, fill='white', dash=(4, 4), width=2)
         self.canvas.create_line(300, 0, 300, 600, fill='white', dash=(4, 4), width=2)
+
+        # Calle Norte
+        self.canvas.create_text(300, 45, text="Unidad \nNacional", font=("Arial", 12, "bold"), angle=90)
+        # Calle Sur
+        self.canvas.create_text(300, 535, text="Unidad \nNacional", font=("Arial", 12, "bold"), angle=90)
+        # Calle Este
+        self.canvas.create_text(540, 300, text="Av. 12 de Abril", font=("Arial", 12, "bold"))
+        # Calle Oeste
+        self.canvas.create_text(60, 300, text="Av. 12 de Abril", font=("Arial", 12, "bold"))
+        
         self.light_coords = {
             'Norte': (300, 260), 'Sur': (300, 340),
             'Este': (340, 300), 'Oeste': (260, 300)
